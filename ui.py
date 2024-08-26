@@ -11,7 +11,7 @@ if st.button("Submit"):
     if username and phone_number:
         # Sending data to Flask backend
         data = {'username': username, 'phone_number': phone_number}
-        response = requests.post("http://127.0.0.1:5000/submit", json=data)
+        response = requests.post("https://voice-back1-2.onrender.com/submit", json=data)
 
         if response.status_code == 200:
             st.success("Data submitted successfully!")
